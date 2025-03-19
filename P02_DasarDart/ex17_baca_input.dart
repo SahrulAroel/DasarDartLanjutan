@@ -2,13 +2,13 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  int a;
-  double b;
-  String c;
+  int? a;
+  double? b;
+  String? c;
   stdout.write('Masukkan bilangan bulat: ');
-  a = int.parse(stdin.readLineSync());
+  a = int.tryParse(stdin.readLineSync() ?? '');
   stdout.write('Masukkan bilangan rill: ');
-  b = double.parse(stdin.readLineSync());
+  b = double.tryParse(stdin.readLineSync() ?? '');
   stdout.write('Masukkan teks: ');
   c = stdin.readLineSync();
   print('\n$a bertipe ${a.runtimeType.toString()}');
